@@ -1,0 +1,179 @@
+What is the main purpose of RCNN in object detection ?
+ans 
+Region Based Convolutional nural network is mainly focused on region porposed cnn.
+it basicaly exteact feature from an image data , claasify those feature and its classes
+and also occure bounding box regression .
+
+What is the difference between Fast RCNN and Faster RCNN?
+ans 
+in fast cnn there is an single rcnn , region of interest pooling , classification
+and boudary box regression respectivly but in faster rcnn there is 1st region proposal network 
+then cnn, then region fo pooling , classification , then last bounding box regression. 
+
+
+How does YOLO handle object detection in real-time ?
+ans
+some yolo models such as yolov8 , yolov9 that are pretrained over large dataset.
+and it predict over a frame (small unit of video capture ) and generate pridiction
+instantly (20ms) and show as output to that frame.
+
+
+Explain the concept of Region Proposal Networks (RPN) in Faster RCNN?
+ans
+for using Faster RCNN ground truth(position of object) is given for fine training.
+Region Proposal Networks do exact that thing with loss it actually calculate the number of
+region and give the property(shape ,size ,color ) of the object
+
+How does YOLOv9 improve upon its predecessors?
+ans 
+
+
+What role does non-max suppression play in YOLO object detection?
+ans
+non max suppression is a computer vision approch for selecting a single entity form a larger number 
+of overlapping thing in a image dataset (ground truth provided).
+
+Describe the data preparation process for training YOLOv9?
+ans
+first we need annotation to image dataset(roboflow).
+then make it's text file that contain meta data of the image.
+in roboflow there is option to crop the image and set the class according to you.
+it is easy to convert label image by annoting it 
+once annotation complite it separated into train , test and validation 
+
+
+What is the significance of anchor boxes in object detection models like YOLOv9?
+ans
+anchor obxes basicaly contain What  the feature inside a image dataset.
+basicaly anchor's are all feature that can be predicted by either nural network or in ground truth. 
+and number of anchor can be reduced by objectiveness test and boundary box regression.
+
+What is the key difference between YOLO and R-CNN architectures?
+
+
+Why is Faster RCNN considered faster than Fast RCNN?
+ans 
+in faste cnn there are
+    i cnn
+    ii - feature map rpn 
+    iii - roi pooling 
+    iv - classification
+    v - bounding box regression
+
+which is effecent than fast rcnn.
+
+What is the role of selective search in RCNN?
+ans 
+selective search is an algorithm that apply on rcnn that it create region and it may contain the object.
+the feature include 
+    i - image segmentation 
+    ii - classify these region
+    iii - object detection
+
+How does YOLOv9 handle multiple classes in object detection?
+ans
+object detection is a concept that is part of also faster rcnn.faster rcnn first generate the 
+feature's (anchor's) that contain object's  as well as non.
+by bounding box regression it's number will minimize and thats why a object can detected.
+
+What are the key differences between YOLOv3 and YOLOv9?
+ans
+yolov9 supports pytorch but yoloc3 supports keras library.
+yolov9 have larger number of parameter than yolov3.
+
+
+How is the loss function calculated in Faster RCNN?
+ans
+in back propagation loss calculate by categorical crossentropy and also we use optimizer function 'adam'
+which is a wildly optimizer function.
+
+Explain how YOLOv9 improves speed compared to earlier versions?
+ans
+yolov9 improve's it'a accuracy by increasing larger nural network as well as best training.
+yolov9 have better image segmentation techniqu's and also trained over fewr imagedataset.
+
+What are some challenges faced in training YOLOv9?
+ans
+some challenges of yolov9  are follwing
+    i - dual priorities
+    ii - speed
+    iii -  multiple scales
+    iv -  limited data, and class imbalance.
+
+How does the YOLOv9 architecture handle large and small object detection?
+ans 
+
+
+What is the significance of fine-tuning in YOLO?
+ans
+basicaly yolo trained on various image dataset not only specific one perticular dataset.
+if we need to work on specific dataset like pridiction human only then we neet to fine tune it.
+by fine tuning the accuracy for that perticular class is improved .
+
+What is the concept of bounding box regression in Faster RCNN?
+ans 
+when training occure in rcnn model the ground truth is given .
+according to that our model segment those feature but when evaluated these then 
+the size of interest of object can large or small to overcome these we fit a layer that predict the 
+size of object according to loss is occure.
+
+Describe how transfer learning is used in YOLO?
+ans 
+Transfer learning (TL) solves the problem of data limitations and avoids the need to build models from
+scratch. This study compared the performance of a TL-based YOLO network 
+(with 11 pretrained backbone CNNs) with four mainstream object detection methods (ODMs) for detecting
+five types of sewer defects.
+
+
+What is the role of the backbone network in object detection models like YOLOv9?
+ans
+The backbone of the YOLO network acts as the feature extraction 
+network that computes feature maps from the input images. The neck connects the backbone and the head.
+
+How does YOLO handle overlapping objects?
+ans
+YOLO's grid-based system adapts to scenarios where objects of different classes 
+occupy the same spatial region. By increasing the size of its output vectors, YOLO can generate
+additional predictions, making it capable of handling overlapping entities without ambiguity.
+
+What is the importance of data augmentation in object detection?
+ans
+by doing data augmentation a model can prevent from overfitting.
+as well as the model train over augmentated data set that if input image is not clear then also the 
+model can capable to pridict the imput image data.
+
+How is performance evaluated in YOLO-based object detection?
+ans
+pricison and recall calculated for the yolo model if pricion and recall both are 
+high for a model then it's performance is considered as high oterwise not.
+
+How do the computational requirements of Faster RCNN compare to those of YOLO?
+
+
+What role do convolutional layers play in object detection with RCNN?
+ans 
+convolutional layer play the main role in object detection that it convolute the image mean it 
+exteact the feature that hidden inside the image and it's out put is a feature map that contain 
+feature of input image.
+
+How does the loss function in YOLO differ from other object detection models?
+ans
+yolo used sum-squared error between the predictions and the ground truth to calculate loss 
+but other detection models use categorical crossentropy function to calculate loss.
+
+What are the key advantages of using YOLO for real-time object detection?
+ans
+we can capture the video with a label of object .
+we can segment the object live.
+predict the path of that object .
+
+How does Faster RCNN handle the trade-off between accuracy and speed?
+ans
+Faster rcnn is more effecent compare with fast rcnn.the accuracy and speed both increses in 
+move to fast rcnn to faster rcnn.
+
+What is the role of the backbone network in both YOLO and Faster RCNN, and how do they differ?
+
+Both the algorithms are fairly accurate but, in some cases, YOLO outperforms Faster R-CNN in 
+terms of accuracy, speed and efficiency. As YOLO performs single shot algorithms it is more 
+preferable to be used in real time object detection whether it be in an image or a video.
